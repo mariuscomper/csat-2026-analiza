@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De ce aprobarea e singura decizie corectă — CSAT, 11 martie 2026</title>
+
+    <meta property="og:title" content="De ce aprobarea dislocării capabilităților militare americane e singura decizie corectă">
+    <meta property="og:description" content="O analiză multidisciplinară a deciziei CSAT din 11 martie 2026: legislație, drept internațional, realism structural, teoria jocurilor, constructivism, antropologie politică.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ro_RO">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #f7f8fa;
+            --bg-secondary: #eceef2;
+            --bg-dark: #0f1a2e;
+            --bg-card: #ffffff;
+            --text-primary: #0f1a2e;
+            --text-secondary: #3a4255;
+            --text-muted: #6b7280;
+            --accent: #1e3a5f;
+            --accent-light: #2d5a8e;
+            --accent-gold: #8b6914;
+            --accent-gold-light: #b8942e;
+            --accent-red: #7b2d3b;
+            --border: #d4d8e0;
+            --shadow: 0 2px 20px rgba(15, 26, 46, 0.06);
+            --shadow-lg: 0 8px 40px rgba(15, 26, 46, 0.1);
+            --max-width: 720px;
+            --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 18px; }
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .progress-bar {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-gold-light));
+            z-index: 1000; transition: width 0.1s linear;
+        }
+
+        .hero {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 6rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(30, 58, 95, 0.4) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 50%, rgba(139, 105, 20, 0.15) 0%, transparent 60%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+        .hero-label {
+            font-family: var(--font-sans); font-weight: 600; font-size: 0.7rem;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--accent-gold-light); margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 700; line-height: 1.2;
+            margin-bottom: 1.5rem; letter-spacing: -0.01em;
+        }
+        .hero .subtitle {
+            font-size: 1.1rem; font-weight: 300;
+            color: rgba(255,255,255,0.75);
+            max-width: 650px; margin: 0 auto 2.5rem; line-height: 1.7;
+        }
+        .hero-meta {
+            display: flex; justify-content: center; gap: 2rem;
+            font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 400;
+        }
+        .hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+        .toc-container {
+            max-width: var(--max-width);
+            margin: -2rem auto 3rem;
+            padding: 0 1.5rem; position: relative; z-index: 2;
+        }
+        .toc {
+            background: var(--bg-card); border-radius: 12px;
+            padding: 2rem 2.5rem; box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+        .toc-title {
+            font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700;
+            color: var(--accent); margin-bottom: 1.2rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .toc ol { list-style: none; counter-reset: toc-counter; }
+        .toc li { counter-increment: toc-counter; margin-bottom: 0.5rem; }
+        .toc li a {
+            color: var(--text-secondary); text-decoration: none;
+            font-size: 0.85rem; font-weight: 400;
+            display: flex; align-items: baseline; gap: 0.75rem;
+            padding: 0.3rem 0; transition: color 0.2s, transform 0.2s;
+        }
+        .toc li a::before {
+            content: counter(toc-counter, decimal-leading-zero);
+            font-family: var(--font-mono); font-size: 0.7rem;
+            color: var(--accent-gold); font-weight: 400; min-width: 1.5rem;
+        }
+        .toc li a:hover { color: var(--accent); transform: translateX(4px); }
+        .toc-divider { border: none; border-top: 1px solid var(--border); margin: 0.8rem 0; }
+
+        .content {
+            max-width: var(--max-width);
+            margin: 0 auto; padding: 0 1.5rem 4rem;
+        }
+        .section { margin-bottom: 4rem; scroll-margin-top: 2rem; }
+        .section-number {
+            font-family: var(--font-mono); font-size: 0.7rem;
+            color: var(--accent-gold); letter-spacing: 0.1em;
+            margin-bottom: 0.5rem; display: block;
+        }
+        h2 {
+            font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700;
+            line-height: 1.25; margin-bottom: 1.5rem;
+            color: var(--text-primary); letter-spacing: -0.01em;
+        }
+        h3 {
+            font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600;
+            line-height: 1.3; margin: 2.5rem 0 1rem; color: var(--text-primary);
+        }
+        h4 {
+            font-family: var(--font-sans); font-size: 1rem; font-weight: 600;
+            margin: 2rem 0 0.8rem; color: var(--accent);
+        }
+        p { margin-bottom: 1.3rem; color: var(--text-secondary); font-weight: 400; }
+
+        .pullquote {
+            border-left: 3px solid var(--accent-gold);
+            padding: 1.5rem 0 1.5rem 1.8rem; margin: 2.5rem 0;
+        }
+        .pullquote p {
+            font-family: var(--font-serif); font-size: 1.15rem;
+            font-style: italic; color: var(--text-primary);
+            line-height: 1.6; margin-bottom: 0;
+        }
+        .pullquote .attribution {
+            font-family: var(--font-sans); font-size: 0.75rem;
+            font-style: normal; color: var(--text-muted); margin-top: 0.8rem; display: block;
+        }
+
+        .insight-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 1.8rem 2rem;
+            margin: 2rem 0; box-shadow: var(--shadow);
+        }
+        .insight-card .card-label {
+            font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.15em; color: var(--accent); margin-bottom: 0.8rem;
+        }
+        .insight-card p { font-size: 0.95rem; margin-bottom: 0.6rem; }
+        .insight-card p:last-child { margin-bottom: 0; }
+
+        .law-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 10px 10px 0; padding: 1.5rem 2rem;
+            margin: 1.5rem 0; box-shadow: var(--shadow);
+        }
+        .law-card .card-label {
+            font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.15em; color: var(--accent-red); margin-bottom: 0.6rem;
+        }
+        .law-card p { font-size: 0.92rem; margin-bottom: 0.5rem; }
+        .law-card p:last-child { margin-bottom: 0; }
+        .law-card code {
+            font-family: var(--font-mono); font-size: 0.82rem;
+            background: var(--bg-secondary); padding: 0.15rem 0.4rem;
+            border-radius: 3px; color: var(--accent);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(30,58,95,0.06), rgba(139,105,20,0.06));
+            border: 1px solid rgba(30,58,95,0.15);
+            border-radius: 10px; padding: 1.8rem 2rem; margin: 2rem 0;
+        }
+        .highlight-box p { color: var(--text-primary); font-weight: 400; margin-bottom: 0; }
+
+        .scenario-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 1rem; margin: 2rem 0;
+        }
+        .scenario-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 1.5rem; box-shadow: var(--shadow);
+        }
+        .scenario-card.approve { border-top: 3px solid #2d7a3a; }
+        .scenario-card.refuse { border-top: 3px solid var(--accent-red); }
+        .scenario-card .card-label {
+            font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.15em; margin-bottom: 0.6rem;
+        }
+        .scenario-card.approve .card-label { color: #2d7a3a; }
+        .scenario-card.refuse .card-label { color: var(--accent-red); }
+        .scenario-card p { font-size: 0.88rem; margin-bottom: 0.4rem; }
+
+        .flow {
+            display: flex; flex-wrap: wrap; align-items: center;
+            gap: 0.5rem; margin: 1.5rem 0; padding: 1.5rem;
+            background: var(--bg-secondary); border-radius: 10px;
+        }
+        .flow-step {
+            background: var(--bg-card); padding: 0.5rem 1rem;
+            border-radius: 6px; font-size: 0.8rem; font-weight: 500;
+            color: var(--text-primary); border: 1px solid var(--border);
+        }
+        .flow-arrow { color: var(--accent-gold); font-size: 1rem; font-weight: 700; }
+
+        .section-divider {
+            text-align: center; margin: 4rem 0;
+            color: var(--accent-gold); font-size: 1.2rem; letter-spacing: 0.5em;
+        }
+
+        .footer {
+            background: var(--bg-dark); color: rgba(255,255,255,0.5);
+            text-align: center; padding: 3rem 2rem; font-size: 0.75rem;
+        }
+        .footer .footer-title {
+            font-family: var(--font-serif); color: rgba(255,255,255,0.8);
+            font-size: 1rem; margin-bottom: 0.5rem;
+        }
+
+        .back-to-top {
+            position: fixed; bottom: 2rem; right: 2rem;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--accent); color: white; border: none;
+            cursor: pointer; display: flex; align-items: center;
+            justify-content: center; box-shadow: var(--shadow-lg);
+            opacity: 0; transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 100; font-size: 1.1rem;
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { background: var(--accent-light); }
+
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 640px) {
+            html { font-size: 16px; }
+            .hero { padding: 4rem 1.5rem 3.5rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero-meta { flex-direction: column; gap: 0.5rem; }
+            .toc { padding: 1.5rem; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.15rem; }
+            .pullquote { padding-left: 1.2rem; }
+            .scenario-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-label">Analiză multidisciplinară</div>
+            <h1>De ce aprobarea dislocării capabilităților militare americane e singura decizie corectă</h1>
+            <p class="subtitle">Legislație, drept internațional, realism structural, teoria jocurilor, constructivism, psihologie politică, antropologie — nouă perspective, aceeași concluzie.</p>
+            <div class="hero-meta">
+                <span>&#128197; 11 martie 2026</span>
+                <span>&#9201; ~30 min lectură</span>
+                <span>&#128209; CSAT, 11 martie 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="toc-container">
+        <nav class="toc">
+            <div class="toc-title">&#9670; Cuprins</div>
+            <ol>
+                <li><a href="#context">Contextul: ce decide CSAT azi</a></li>
+                <li><a href="#legislatie">Cadrul legislativ românesc</a></li>
+                <li><a href="#drept-international">Drept internațional: legalitate și bună-credință</a></li>
+                <hr class="toc-divider">
+                <li><a href="#realism">Realism structural: ierarhia și constrângerile sistemice</a></li>
+                <li><a href="#aliante">Teoria alianțelor: abandonare vs. captivitate</a></li>
+                <li><a href="#game-theory">Teoria jocurilor: structura dominantă a deciziei</a></li>
+                <li><a href="#constructivism">Constructivism: identitate și comunitate de securitate</a></li>
+                <li><a href="#psihologie">Psihologie politică și securitate ontologică</a></li>
+                <li><a href="#antropologie">Antropologie politică: reciprocitate și patronaj</a></li>
+                <li><a href="#economie">Economie politică: costuri, beneficii, dependențe</a></li>
+                <li><a href="#institutii">Sociologie instituțională: path dependence</a></li>
+                <hr class="toc-divider">
+                <li><a href="#concluzie">Convergența disciplinară ca test de robustețe</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="content">
+
+        <!-- CONTEXT -->
+        <section class="section fade-in" id="context">
+            <span class="section-number">01</span>
+            <h2>Contextul: ce decide CSAT azi</h2>
+
+            <p>La 28 februarie 2026, Statele Unite și Israelul au lansat o serie de lovituri aeriene asupra Iranului, în cadrul operațiunilor denumite <em>Epic Fury</em> (SUA) și <em>Roaring Lion</em> (Israel). Loviturile au vizat infrastructura militară, programul nuclear și forțele de securitate iraniene, inclusiv Corpul Gardienilor Revoluției. Ayatollahul Ali Khamenei a fost ucis. Iranul a răspuns cu sute de rachete și drone împotriva Israelului, bazelor americane din regiune, și a infrastructurii civile și militare din statele arabe din Golf.</p>
+
+            <p>Baze britanice din Cipru, Bahrain și Qatar au fost atacate. O dronă iraniană a lovit baza RAF Akrotiri. NATO a interceptat o rachetă balistică care se îndrepta spre Turcia. Conflictul a produs mii de victime, a închis Strâmtoarea Hormuz și a perturbat piețele petroliere globale.</p>
+
+            <p>În acest context, Președintele României, Nicușor Dan, a convocat ședința CSAT de azi, 11 martie 2026. Pe ordinea de zi:</p>
+
+            <div class="insight-card">
+                <div class="card-label">Ordinea de zi — CSAT, 11 martie 2026</div>
+                <p><strong>1.</strong> Situația din Orientul Mijlociu. Implicații pentru România.</p>
+                <p><strong>2.</strong> Evaluarea impactului evenimentelor asupra pieței petroliere din România.</p>
+                <p><strong>3.</strong> Analiza dislocării temporare pe teritoriul României a unor capabilități militare.</p>
+            </div>
+
+            <p>Conform surselor citate de Digi24 și Antena 3 CNN, Statele Unite au solicitat României să permită utilizarea Bazei Aeriene 57 de la Mihail Kogălniceanu pentru operațiuni logistice și de realimentare legate de conflictul din Iran. Prezenta analiză argumentează că aprobarea este singura decizie rațională, legală și conformă cu interesul național al României.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- LEGISLAȚIE -->
+        <section class="section fade-in" id="legislatie">
+            <span class="section-number">02</span>
+            <h2>Cadrul legislativ românesc: acoperire completă</h2>
+
+            <p>Decizia CSAT se înscrie într-un cadru legislativ stratificat care acoperă integral procedura. Fiecare nivel — de la Constituție la acordul bilateral — creează o procedură clară și o bază internă solidă pentru aprobare.</p>
+
+            <h3>Constituția României</h3>
+
+            <div class="law-card">
+                <div class="card-label">Art. 118 alin. (5) — Forțele armate</div>
+                <p>Pe teritoriul României pot intra, staționa, desfășura operațiuni sau trece trupe străine <strong>numai în condițiile legii sau ale tratatelor internaționale</strong> la care România este parte.</p>
+            </div>
+
+            <div class="law-card">
+                <div class="card-label">Art. 11 — Dreptul internațional și dreptul intern</div>
+                <p>(1) Statul român se obligă să îndeplinească <strong>întocmai și cu bună-credință</strong> obligațiile ce-i revin din tratatele la care este parte.</p>
+                <p>(2) Tratatele ratificate de Parlament, potrivit legii, <strong>fac parte din dreptul intern</strong>.</p>
+            </div>
+
+            <div class="law-card">
+                <div class="card-label">Art. 10 — Relații internaționale</div>
+                <p>România întreține și dezvoltă relații pașnice cu toate statele și, în acest cadru, relații de bună vecinătate, întemeiate pe <strong>principiile și pe celelalte norme general admise ale dreptului internațional</strong>.</p>
+            </div>
+
+            <p>Acordul bilateral România-SUA privind prezența militară americană și Tratatul NATO sunt ambele ratificate de Parlament — deci sunt drept intern românesc. Art. 11 obligă România să le respecte cu bună-credință.</p>
+
+            <h3>Legea 415/2002 — Organizarea CSAT</h3>
+
+            <p>Legea de organizare a CSAT conferă Consiliului competențe explicite pentru exact acest tip de decizie:</p>
+
+            <div class="law-card">
+                <div class="card-label">Competențe CSAT relevante</div>
+                <p><strong>Avizarea condițiilor</strong> de intrare, trecere sau staționare pe teritoriul României a trupelor străine.</p>
+                <p><strong>Înființarea, desființarea, dislocarea și redislocarea</strong>, în timp de pace, pe teritoriul național, a marilor unități militare de la eșalonul brigadă, inclusiv, în sus.</p>
+            </div>
+
+            <h3>Legea 291/2007 — Cadrul central</h3>
+
+            <p>Legea 291/2007 (republicată, modificată prin Legea 189/2015) constituie cadrul general privind condițiile în care forțele armate străine pot intra, staționa, desfășura operațiuni sau tranzita teritoriul României. Procedura de aprobare este diferențiată pe niveluri:</p>
+
+            <div class="law-card">
+                <div class="card-label">Art. 3 — Baze și comandamente (aprobare parlamentară)</div>
+                <p>Înființarea pe teritoriul României a unor comandamente, entități sau structuri militare străine ori multinaționale se face: <strong>(a)</strong> în baza tratatelor internaționale ratificate de Parlament; <strong>(b)</strong> cu aprobarea Parlamentului, la propunerea Președintelui, cu avizul CSAT.</p>
+            </div>
+
+            <div class="law-card">
+                <div class="card-label">Art. 4 alin. (1) — Operații militare conform tratatelor (aprobare prezidențială)</div>
+                <p>Intrarea și staționarea forțelor armate străine sau tranzitarea teritoriului, <strong>în scopul pregătirii și/sau desfășurării de operații militare, potrivit angajamentelor asumate de România prin tratate internaționale</strong>, se aprobă de către Președintele României la propunerea prim-ministrului, după consultarea CSAT. Președintele informează Parlamentul în termen de <strong>5 zile</strong>.</p>
+            </div>
+
+            <div class="law-card">
+                <div class="card-label">Art. 5 — Alte operațiuni (aprobare ministerială sau prezidențială)</div>
+                <p>Pentru operațiuni altele decât cele de la Art. 4: <strong>(a)</strong> ministrul apărării aprobă, la propunerea Șefului SMG, pentru forțele din state NATO/UE/PfP; <strong>(b)</strong> Președintele aprobă, la propunerea ministrului, pentru alte situații.</p>
+            </div>
+
+            <p>Baza Kogălniceanu funcționează deja în virtutea <strong>Acordului bilateral România-SUA</strong> (Defense Cooperation Agreement), ratificat de Parlamentul României. Solicitarea americană de utilizare intensificată în contextul conflictului din Iran se încadrează în Art. 4 alin. (1) — angajamente asumate prin tratat. În principiu, o utilizare intensificată încadrată în angajamentele deja asumate nu necesită o nouă aprobare parlamentară; traseul principal rămâne cel din Legea 291/2007.</p>
+
+            <h3>Procedura concretă</h3>
+
+            <div class="flow">
+                <span class="flow-step">Premierul propune</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">CSAT consultă</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">Președintele aprobă</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">Parlamentul informat (5 zile)</span>
+            </div>
+
+            <h3>Legea 121/2011 — Participare în afara teritoriului</h3>
+
+            <p>Dacă discuția CSAT ajunge la participarea forțelor armate române la operații externe (ipoteză mai puțin probabilă, dar nu exclusă), Legea 121/2011 reglementează și acest aspect, cu aceeași procedură: CSAT hotărăște anual forțele disponibile, Președintele aprobă trimiterea la propunerea premierului, Parlamentul e informat.</p>
+
+            <div class="highlight-box">
+                <p><strong>Concluzie legislativă:</strong> Cadrul juridic intern acoperă complet decizia. Procedura este clară, precedentul există (Afganistan, Irak — ambele operate din Kogălniceanu fără contestații juridice), iar niciun element legislativ nu constituie un obstacol.</p>
+            </div>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- DREPT INTERNAȚIONAL -->
+        <section class="section fade-in" id="drept-international">
+            <span class="section-number">03</span>
+            <h2>Drept internațional: legalitate și bună-credință</h2>
+
+            <p>Legalitatea loviturilor americane asupra Iranului este contestată doctrinar. Majoritatea juriștilor academici le consideră o încălcare a Art. 2(4) din Carta ONU. Dar decizia CSAT nu depinde de această dezbatere — și asta e punctul central.</p>
+
+            <h3>Ce invocă SUA</h3>
+
+            <p>SUA au notificat formal Consiliul de Securitate al ONU sub Art. 51, invocând trei baze juridice:</p>
+
+            <div class="insight-card">
+                <div class="card-label">Autoapărare colectivă a Israelului</div>
+                <p>Iranul a atacat direct Israelul cu rachete balistice și drone în 2024, a finanțat Hamas (masacrul din 7 octombrie), a armat Hezbollah și a susținut proxies armate în toată regiunea. Există un conflict armat internațional în curs între Iran și Israel, iar SUA invocă dreptul de a sprijini un aliat sub atac.</p>
+            </div>
+
+            <div class="insight-card">
+                <div class="card-label">Autoapărare anticipatorie contra programului nuclear</div>
+                <p>Doctrina autoapărării anticipatorii (pre-emptive) are susținători în dreptul internațional, deși condițiile Caroline (amenințare „instant, overwhelming, leaving no choice of means") sunt contestate ca fiind îndeplinite. SUA argumentează că programul nuclear iranian constituia o amenințare în curs de materializare.</p>
+            </div>
+
+            <div class="insight-card">
+                <div class="card-label">Acumularea de evenimente (needle-prick theory)</div>
+                <p>Atacuri iraniene repetate asupra intereselor americane de-a lungul deceniilor — de la criza ostaticilor din 1979 la sute de militari americani uciși de proxies iraniene — pot constitui cumulativ un „atac armat" în sensul Art. 51.</p>
+            </div>
+
+            <h3>De ce România nu trebuie să tranșeze dezbaterea</h3>
+
+            <p>Art. 11 din Constituția României cere respectarea tratatelor „cu bună-credință". Buna-credință nu înseamnă omnisciență juridică — înseamnă că statul acționează pe baza unei <strong>interpretări rezonabile</strong> a dreptului.</p>
+
+            <p>SUA au invocat Art. 51, au notificat Consiliul de Securitate, nicio instanță internațională nu a constatat ilegalitatea loviturilor, nicio rezoluție a Consiliului de Securitate nu le condamnă. România nu are nici competența, nici obligația, nici interesul să efectueze o determinare juridică independentă contrară celei a aliatului.</p>
+
+            <div class="pullquote">
+                <p>Carta ONU nu impune statelor să efectueze verificări juridice proprii ale acțiunilor aliaților înainte de a coopera. Standardul este buna-credință, nu certitudinea juridică.</p>
+            </div>
+
+            <p>Comparația cu Marea Britanie este instructivă dar nu replicabilă. UK are tradiție de legal advice publicat, un Procuror General care avizează formal, și loc permanent în Consiliul de Securitate — ceea ce îi creează atât capacitatea, cât și nevoia de analize juridice independente. România nu are niciunul dintre aceste mecanisme instituționale. A le importa ad-hoc, într-o criză, ar fi un act de semnalizare negativă fără fundament instituțional — echivalent funcțional cu a exprima îndoieli asupra legitimității operațiunii.</p>
+
+            <div class="highlight-box">
+                <p><strong>Concluzie:</strong> Există argumente juridice rezonabile pentru poziția americană, nicio instanță nu a constatat contrariul, iar România acționează în baza unor tratate ratificate. Cadrul juridic internațional nu constituie un obstacol pentru aprobare.</p>
+            </div>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- REALISM -->
+        <section class="section fade-in" id="realism">
+            <span class="section-number">04</span>
+            <h2>Realism structural: ierarhia și constrângerile sistemice</h2>
+
+            <p>Realismul structural (Waltz) postulează că comportamentul statelor este determinat preponderent de poziția lor în sistemul internațional, nu de politica internă sau de preferințele liderilor. Structura sistemului — anarhic, ierarhizat de facto prin distribuția capabilităților — generează constrângeri pe care statele le pot ignora doar cu riscuri existențiale.</p>
+
+            <p>România este o putere mică aflată la periferia estică a NATO, cu o graniță de aproape 650 km cu Ucraina (stat aflat în război cu Rusia), acces la Marea Neagră (spațiu de competiție strategică directă), și resurse militare insuficiente pentru descurajare independentă. În termenii teoriei realiste, <strong>supraviețuirea României ca stat suveran depinde structural de integrarea într-o alianță cu o putere hegemonică</strong> capabilă să furnizeze bunuri de securitate pe care România nu le poate produce singură.</p>
+
+            <p>Stephen Walt, în teoria balanței amenințărilor, arată că statele nu fac balanță pur împotriva puterii, ci împotriva <em>amenințării percepute</em> — funcție de putere agregată, proximitate geografică, capabilități ofensive și intenții agresive percepute. Pentru România, Rusia îndeplinește toate cele patru criterii la niveluri maxime. Prin urmare, alianța cu SUA nu este o opțiune politică, ci o necesitate structurală.</p>
+
+            <div class="pullquote">
+                <p>Orice acțiune care erodează credibilitatea României ca aliat al SUA echivalează cu erodarea mecanismului care garantează supraviețuirea statului.</p>
+            </div>
+
+            <p>Refuzul utilizării bazei de la Kogălniceanu — o bază deja operată în virtutea unui acord bilateral ratificat — ar constitui un semnal că România este un aliat condițional. În logica realistă, aliatul condiționat este funcțional echivalent cu lipsa aliatului: dacă un stat nu poate fi predictibil în momentele de criză, valoarea sa ca partener de alianță scade proporțional, iar hegemonul își recalibrează investițiile de securitate către parteneri mai fiabili.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- ALIANȚE -->
+        <section class="section fade-in" id="aliante">
+            <span class="section-number">05</span>
+            <h2>Teoria alianțelor: abandonare vs. captivitate</h2>
+
+            <p>Glenn Snyder a formalizat dilema centrală a alianțelor asimetrice: fiecare aliat se confruntă simultan cu <strong>riscul abandonării</strong> (aliatul puternic te lasă expus) și cu <strong>riscul captivității</strong> (ești atras într-un conflict care nu te privește). Cele două riscuri sunt invers proporționale.</p>
+
+            <p>Pentru România, asimetria e atât de pronunțată încât dilema este doar aparent echilibrată:</p>
+
+            <div class="scenario-grid">
+                <div class="scenario-card refuse">
+                    <div class="card-label">Riscul abandonării — existențial</div>
+                    <p>Război activ la graniță (Ucraina). Scut antirachetă la Deveselu dependent de angajament american. Capacitate de apărare convențională insuficientă. Fără SUA, România rămâne expusă la presiunea rusească fără mijloace credibile de descurajare.</p>
+                </div>
+                <div class="scenario-card approve">
+                    <div class="card-label">Riscul captivității — neglijabil</div>
+                    <p>Iranul nu are nici capacitatea, nici interesul strategic de a lovi România. Distanța geografică depășește raza eficientă a majorității rachetelor iraniene. România nu are nicio valoare ca țintă strategică prioritară.</p>
+                </div>
+            </div>
+
+            <p>Calculul snyderian este neambiguu: costul marginal al captivității (risc iranian foarte scăzut) este neglijabil comparat cu costul marginal al abandonării (pierderea garanțiilor americane față de o amenințare rusească acută).</p>
+
+            <p>Mancur Olson și Richard Zeckhauser au demonstrat în 1966 că în alianțele asimetrice, aliatul mic beneficiază disproporționat de bunurile publice de securitate furnizate de aliatul mare — ceea ce creează o obligație implicită de a contribui atunci când i se cere. Facilitarea logistică de la Kogălniceanu este, în această logică, <strong>una dintre cele mai ieftine forme de contribuție posibile</strong> — maxim de semnalare cu minim de risc.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- GAME THEORY -->
+        <section class="section fade-in" id="game-theory">
+            <span class="section-number">06</span>
+            <h2>Teoria jocurilor: structura dominantă a deciziei</h2>
+
+            <p>Structura formală a deciziei poate fi modelată ca un joc de formă extensivă cu informație incompletă privind tipul jucătorului. SUA observă acțiunea României și își actualizează, în sens bayesian, evaluarea privind fiabilitatea României ca aliat.</p>
+
+            <p>Matricea payoff-urilor este radical asimetrică:</p>
+
+            <div class="scenario-grid">
+                <div class="scenario-card approve">
+                    <div class="card-label">Aprobă + loviturile necontestate</div>
+                    <p>Capital de alianță crescut. Zero costuri.</p>
+                </div>
+                <div class="scenario-card approve">
+                    <div class="card-label">Aprobă + loviturile contestate ulterior</div>
+                    <p>Cost reputațional <strong>minor și distribuit</strong> într-o coaliție largă (UK, Australia, Bahrain, Qatar etc.). Diluat până la insignifianță.</p>
+                </div>
+                <div class="scenario-card refuse">
+                    <div class="card-label">Refuză + loviturile necontestate</div>
+                    <p>Pierdere de încredere <strong>concentrată și nediluabilă</strong>. Recategorizare ca aliat nesigur.</p>
+                </div>
+                <div class="scenario-card refuse">
+                    <div class="card-label">Refuză + loviturile contestate</div>
+                    <p>România câștigă un „am avut dreptate" pe care <strong>nimeni nu îl recompensează</strong>. Pierderea de încredere rămâne.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Aprobarea este strategie strict dominantă:</strong> produce un payoff superior refuzului în fiecare stare posibilă a lumii. În teoria jocurilor, existența unei strategii strict dominante elimină necesitatea analizei suplimentare.</p>
+            </div>
+
+            <p>Jocul de semnalizare (Spence) adaugă o dimensiune suplimentară. Aprobarea rapidă și necondiționată funcționează ca <strong>semnal de tip pooling</strong>: România se plasează în grupul aliaților fiabili (Polonia, UK, Australia) și se distanțează de grupul aliaților ezitanți (Spania, Turcia). Ezitarea, chiar dacă urmată de aprobare, e un semnal de tip separating — exact așa cum întârzierea lui Starmer, deși urmată de aprobare, a generat reproșuri publice din partea lui Trump.</p>
+
+            <p>Conceptul de reputație în jocuri repetate (Kreps și Wilson, 1982): într-un joc cu informație incompletă, chiar și o singură deviere de la cooperare poate distruge o reputație construită în zeci de runde anterioare. România a cooperat consistent de la aderarea la NATO: Afganistan, Irak, scutul antirachetă. O singură deviere de la cooperare ar anula capitalul reputațional acumulat.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- CONSTRUCTIVISM -->
+        <section class="section fade-in" id="constructivism">
+            <span class="section-number">07</span>
+            <h2>Constructivism: identitate și comunitate de securitate</h2>
+
+            <p>Constructiviștii (Wendt, Adler, Barnett) argumentează că identitățile și interesele statelor sunt constituite social, nu date exogen. România post-1989 și-a construit identitatea geopolitică explicit în jurul integrării euroatlantice. NATO și UE nu sunt doar aranjamente de securitate — sunt <strong>comunități de identitate</strong> în care participarea presupune internalizarea unui set de norme, practici și așteptări.</p>
+
+            <p>Una dintre normele centrale ale comunității NATO este <strong>solidaritatea aliată în momente de criză</strong>, chiar și atunci când cadrul juridic este ambiguu. Această normă nu e codificată în Art. 5, ci operează ca o logică a adecvării (<em>logic of appropriateness</em>, March și Olsen): statele nu calculează doar ce e rațional, ci ce e adecvat pentru un actor cu identitatea lor.</p>
+
+            <div class="pullquote">
+                <p>Refuzul ar genera un deficit de identitate: România s-ar plasa în afara comunității normative din care și-a construit toată politica externă post-comunistă.</p>
+            </div>
+
+            <p>Karl Deutsch ar adăuga că comunitățile de securitate se mențin prin tranzacții repetate care consolidează încrederea mutuală. Pentru un stat cu o istorie relativ scurtă de integrare (NATO din 2004), stocul de încredere acumulat e mai fragil și mai puțin rezistent la șocuri decât cel al unui membru fondator.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- PSIHOLOGIE -->
+        <section class="section fade-in" id="psihologie">
+            <span class="section-number">08</span>
+            <h2>Psihologie politică și securitate ontologică</h2>
+
+            <p>Conceptul de <strong>securitate ontologică</strong> (Giddens, adaptat de Mitzen și Steele la relațiile internaționale) se referă la nevoia statelor de continuitate a sinelui — de a menține o narațiune coerentă despre cine sunt și cum acționează.</p>
+
+            <p>Narațiunea strategică a României post-1989 are un ax central: <em>de la izolare la integrare</em>. Toată construcția instituțională — aderarea la NATO, la UE, parteneriatul strategic cu SUA, găzduirea scutului antirachetă — se organizează în jurul acestei narațiuni. Refuzul de a facilita operațiuni aliate într-un moment de criză ar rupe această narațiune, generând ceea ce Steele numește <strong>anxietate ontologică</strong>: statul nu mai știe cine este.</p>
+
+            <p>Din perspectiva psihologiei cognitive (Kahneman și Tversky), decidenții sunt mai sensibili la pierderi decât la câștiguri (<em>loss aversion</em>). Aprobarea menține status quo-ul relațional — nu câștigă nimic dramatic, dar nu pierde nimic. Refuzul implică o pierdere certă și probabil ireversibilă de încredere aliată.</p>
+
+            <p>Robert Jervis, în analiza percepției și mispercepției, arată că semnalele trimise în momente de criză sunt interpretate de destinatari prin lentile cognitive pre-existente. Administrația Trump operează cu un cadru binar — aliați fiabili vs. free-rideri — și folosește teste concrete (cine contribuie, cine ezită) pentru a categoriza statele. O ezitare românească ar fi procesată prin acest filtru și ar produce o <strong>recategorizare greu reversibilă</strong>.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- ANTROPOLOGIE -->
+        <section class="section fade-in" id="antropologie">
+            <span class="section-number">09</span>
+            <h2>Antropologie politică: reciprocitate, datorie și patronaj</h2>
+
+            <p>Alianțele internaționale operează parțial prin mecanisme care precedează statul modern. Marcel Mauss, în <em>Eseu despre dar</em> (1925), arată că schimbul de daruri creează obligații sociale care structurează relațiile: <strong>a primi fără a da înapoi este nu doar o încălcare economică, ci o rușine socială</strong> care distruge relația.</p>
+
+            <p>România a primit „daruri" strategice semnificative de la SUA: integrare în NATO, prezență militară la Marea Neagră, scutul antirachetă de la Deveselu, investiții în modernizarea forțelor armate. Aceste daruri creează așteptarea reciprocității. Când SUA solicită acces la o bază pe care deja o operează, cererea este minimă față de ceea ce a fost oferit — refuzul ar constitui o încălcare masivă a echilibrului de reciprocitate.</p>
+
+            <p>James Scott, în analiza relațiilor patron-client, descrie cum statele mici navighează asimetriile de putere: clientul oferă loialitate și servicii în schimbul protecției patronului. Relația nu e egalitară, dar e stabilă atâta timp cât ambele părți își respectă obligațiile. <strong>Clientul care refuză serviciul când patronul îl cere nu obține autonomie — obține abandonul protecției.</strong></p>
+
+            <p>Pierre Bourdieu ar analiza decizia prin prisma capitalului simbolic. România acumulează capital simbolic în câmpul geopolitic prin acte de conformitate. Acest capital poate fi mobilizat ulterior — pentru negocieri bilaterale, pentru poziționări în cadrul NATO, pentru acces la resurse de securitate. Capitalul simbolic pierdut printr-un refuz nu se recuperează ușor, deoarece câmpul funcționează prin memorie instituțională.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- ECONOMIE -->
+        <section class="section fade-in" id="economie">
+            <span class="section-number">10</span>
+            <h2>Economie politică: costuri, beneficii și dependențe</h2>
+
+            <p>Analiza cost-beneficiu este profund asimetrică.</p>
+
+            <p><strong>Costurile aprobării sunt reduse:</strong> Kogălniceanu e deja operațională sub acord bilateral, nu presupune trimiterea de trupe românești în teatrul de operațiuni, nu implică cheltuieli suplimentare semnificative, și nu expune România unui risc militar iranian credibil (distanța geografică, lipsa de interes strategic iranian, capabilități limitate la această rază).</p>
+
+            <p><strong>Beneficiile aprobării:</strong> consolidarea relației bilaterale într-un moment de recalibrare a angajamentelor americane globale; acumularea de capital politic utilizabil în negocieri viitoare (procurări militare, investiții, sprijin diplomatic); menținerea credibilității în cadrul NATO.</p>
+
+            <p><strong>Costurile refuzului sunt severe:</strong> precedentul Spaniei ilustrează dinamica — premierul Sánchez a refuzat cooperarea, iar Trump a amenințat cu suspendarea comerțului bilateral. Spania își poate permite această tensiune — e a cincea economie a UE. România nu. Economia românească e semnificativ dependentă de investiții americane și de accesul la piețele transatlantice, iar sectorul de apărare depinde de procurări din SUA (F-16, sisteme Patriot, HIMARS).</p>
+
+            <p>Conflictul din Iran afectează deja piața petrolieră globală — al doilea punct de pe agenda CSAT. Cooperarea cu SUA în gestiunea crizei creează avantaje de negociere în eventuale aranjamente de compensare sau acces preferențial la rezerve strategice. Refuzul elimină această pârghie.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- INSTITUȚII -->
+        <section class="section fade-in" id="institutii">
+            <span class="section-number">11</span>
+            <h2>Sociologie instituțională: path dependence și inerție</h2>
+
+            <p>Teoria instituționalistă istorică (Pierson, Thelen) arată că deciziile anterioare creează căi de dependență care constrâng opțiunile viitoare. România a construit întreaga sa arhitectură de securitate pe integrarea euroatlantică: baze americane, sisteme de arme interoperabile cu NATO, doctrină militară compatibilă, instruire comună, participare la misiuni. Aceste investiții sunt <em>sunk costs</em> care nu pot fi recuperate și nu pot fi reconvertite.</p>
+
+            <p>A refuza cooperarea în acest punct ar fi echivalentul unei deraieri de pe o cale instituțională în care s-au investit trei decenii de resurse, capital politic și construcție identitară. <strong>Costul ieșirii de pe cale (path-switching) este prohibitiv:</strong> nu există o arhitectură alternativă de securitate viabilă pentru România, nici temporal (nu se poate construi peste noapte), nici material (nu există alt hegemon disponibil și dispus să furnizeze garanții echivalente).</p>
+
+            <p>DiMaggio și Powell ar adăuga că izomorfismul instituțional — tendința organizațiilor de a converge către practici similare sub presiune coercitivă, mimetică sau normativă — operează puternic în cadrul NATO. Statele membre adoptă practici similare nu doar pentru că sunt optime, ci pentru că sunt așteptate. România aprobă pentru că așa procedează un aliat NATO în această situație — și această logică instituțională este mai puternică decât orice calcul individual.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- CONCLUZIE -->
+        <section class="section fade-in" id="concluzie">
+            <span class="section-number">12</span>
+            <h2>Convergența disciplinară ca test de robustețe</h2>
+
+            <p>Faptul că nouă perspective analitice distincte converg independent către aceeași concluzie nu este o coincidență. Este un indicator de robustețe: atunci când cadre cu asumpții ontologice, epistemologice și metodologice diferite produc aceleași rezultate, probabilitatea ca rezultatul să fie artefactul unei singure perspective este foarte scăzută.</p>
+
+            <div class="highlight-box" style="padding: 2rem 2.2rem;">
+                <p style="font-weight: 600; font-size: 0.95rem; margin-bottom: 1.2rem; color: var(--accent);">Nouă perspective, aceeași concluzie:</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 2rem;">
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Realismul:</strong> maximizează securitatea</p>
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Teoria alianțelor:</strong> minimizează riscul abandonării</p>
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Teoria jocurilor:</strong> strategie strict dominantă</p>
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Constructivismul:</strong> coerentă cu identitatea</p>
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Psihologia:</strong> evită pierderea</p>
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Antropologia:</strong> respectă reciprocitatea</p>
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Dreptul:</strong> acoperită juridic</p>
+                    <p style="margin-bottom: 0.3rem; font-size: 0.92rem;"><strong>Economia politică:</strong> cost redus, beneficii reale</p>
+                    <p style="margin-bottom: 0; font-size: 0.92rem; grid-column: 1 / -1;"><strong>Sociologia instituțională:</strong> pe calea dependenței constituite în trei decenii</p>
+                </div>
+            </div>
+
+            <p>Niciuna nu produce un argument serios pentru refuz.</p>
+
+            <p>Poți discuta nuanțe, costuri colaterale și implicații morale. Ce nu poți susține serios este că, pentru România, refuzul ar fi fost opțiunea mai responsabilă. Nu era. A decide altfel nu ar fi fost curaj sau principialitate — ar fi fost iraționalitate strategică, cu consecințe plătite nu de decidenți, ci de cetățenii a căror securitate depinde de alianțele pe care refuzul le-ar eroda.</p>
+
+            <div class="pullquote">
+                <p>Aprobarea nu e un gest de complezență față de un aliat puternic. Este decizia pe care fiecare busolă relevantă — juridică, strategică, economică, identitară — o indică în același sens. Când toate arată aceeași direcție, nu mai e vorba de preferință. E vorba de luciditate.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer-title">De ce aprobarea e singura decizie corectă</p>
+        <p>O analiză multidisciplinară a deciziei CSAT din 11 martie 2026. Bazată pe legislație românească, drept internațional public, și cadre teoretice din științele politice, relații internaționale, teoria jocurilor, psihologie, antropologie, economie politică și sociologie instituțională.</p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Înapoi sus">&#8593;</button>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+        }
+        window.addEventListener('scroll', updateProgress, { passive: true });
+
+        const backToTop = document.getElementById('backToTop');
+        function toggleBackToTop() {
+            if (window.scrollY > 600) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        }
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        fadeEls.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
