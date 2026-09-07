@@ -17,7 +17,10 @@ Disponibil live la: https://mariuscomper.github.io/csat-2026-analiza/
 
 ```
 index.html   — articolul complet, formatat pentru web
+theme-toggle.js — comutator local pentru tema luminoasă și întunecată
 ```
+
+Pagina folosește fonturi de sistem, respectă preferința `prefers-reduced-motion` și nu depinde de CDN.
 
 ---
 
